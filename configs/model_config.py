@@ -43,8 +43,8 @@ MODEL_PATH = {
     "llm_model": {
         # 以下部分模型并未完全测试，仅根据fastchat和vllm模型的模型列表推定支持
         "chatglm-6b": "THUDM/chatglm-6b",
-        "chatglm2-6b": str(anylearn.get_model("yhuang/ChatGLM2-6B").download()),
-        # "chatglm2-6b": "THUDM/chatglm2-6b",
+        # "chatglm2-6b": str(anylearn.get_model("yhuang/ChatGLM2-6B").download()),
+        "chatglm2-6b": "THUDM/chatglm2-6b",
         "chatglm2-6b-int4": "THUDM/chatglm2-6b-int4",
         "chatglm2-6b-32k": "THUDM/chatglm2-6b-32k",
 
