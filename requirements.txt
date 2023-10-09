@@ -27,7 +27,7 @@ pathlib
 pytest
 scikit-learn
 numexpr
-vllm==0.1.7; sys_platform == "linux"
+vllm==0.2.0; sys_platform == "linux"
 # online api libs
 # zhipuai
 # dashscope>=1.10.0 # qwen
