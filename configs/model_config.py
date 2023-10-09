@@ -92,8 +92,8 @@ MODEL_PATH = {
         "Qwen-7B":"Qwen/Qwen-7B",
         "Qwen-14B":"Qwen/Qwen-14B",
         "Qwen-7B-Chat":"Qwen/Qwen-7B-Chat",
-        "Qwen-14B-Chat": str(anylearn.get_model("yhuang/Qwen-14B-Chat").download() / "Qwen-14B-Chat"),
-        # "Qwen-14B-Chat":"Qwen/Qwen-14B-Chat",
+        # "Qwen-14B-Chat": str(anylearn.get_model("yhuang/Qwen-14B-Chat").download() / "Qwen-14B-Chat"),
+        "Qwen-14B-Chat":"Qwen/Qwen-14B-Chat",
     },
 }
 
