@@ -59,7 +59,8 @@ MODEL_PATH = {
         "aquilachat-7b":"BAAI/AquilaChat-7B",
 
         "internlm-7b":"internlm/internlm-7b",
-        "internlm-chat-7b":"internlm/internlm-chat-7b",
+        "internlm-chat-7b": str(anylearn.get_model("yhuang/InternLM-Chat-7B").download() / "internlm-chat-7b"),
+        # "internlm-chat-7b":"internlm/internlm-chat-7b",
 
         "falcon-7b":"tiiuae/falcon-7b",
         "falcon-40b":"tiiuae/falcon-40b",
@@ -104,7 +105,8 @@ EMBEDDING_MODEL = "text2vec-base" # 可以尝试最新的嵌入式sota模型：p
 EMBEDDING_DEVICE = "auto"
 
 # LLM 名称
-LLM_MODEL = "Qwen-14B-Chat"
+LLM_MODEL = "internlm-chat-7b"
+# LLM_MODEL = "Qwen-14B-Chat"
 # LLM_MODEL = "chatglm2-6b"
 
 # LLM 运行设备。设为"auto"会自动检测，也可手动设定为"cuda","mps","cpu"其中之一。
