@@ -43,8 +43,8 @@ MODEL_PATH = {
     "llm_model": {
         # 以下部分模型并未完全测试，仅根据fastchat和vllm模型的模型列表推定支持
         "chatglm-6b": "THUDM/chatglm-6b",
-        "chatglm2-6b": str(anylearn.get_model("yhuang/ChatGLM2-6B-dirname").download() / "chatglm2-6b"),
-        # "chatglm2-6b": "THUDM/chatglm2-6b",
+        # "chatglm2-6b": str(anylearn.get_model("yhuang/ChatGLM2-6B-dirname").download() / "chatglm2-6b"),
+        "chatglm2-6b": "THUDM/chatglm2-6b",
         "chatglm2-6b-int4": "THUDM/chatglm2-6b-int4",
         "chatglm2-6b-32k": "THUDM/chatglm2-6b-32k",
 
@@ -91,7 +91,8 @@ MODEL_PATH = {
         "Qwen-7B":"Qwen/Qwen-7B",
         "Qwen-14B":"Qwen/Qwen-14B",
         "Qwen-7B-Chat":"Qwen/Qwen-7B-Chat",
-        "Qwen-14B-Chat":"Qwen/Qwen-14B-Chat",
+        "Qwen-14B-Chat": str(anylearn.get_model("yhuang/Qwen-14B-Chat").download() / "Qwen-14B-Chat"),
+        # "Qwen-14B-Chat":"Qwen/Qwen-14B-Chat",
     },
 }
 
@@ -103,7 +104,8 @@ EMBEDDING_MODEL = "text2vec-base" # 可以尝试最新的嵌入式sota模型：p
 EMBEDDING_DEVICE = "auto"
 
 # LLM 名称
-LLM_MODEL = "chatglm2-6b"
+LLM_MODEL = "Qwen-14B-Chat"
+# LLM_MODEL = "chatglm2-6b"
 
 # LLM 运行设备。设为"auto"会自动检测，也可手动设定为"cuda","mps","cpu"其中之一。
 LLM_DEVICE = "auto"
