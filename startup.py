@@ -729,10 +729,10 @@ async def start_main_server():
                 p.name = f"{p.name} ({p.pid})"
 
             # 等待所有model_worker启动完成
-            # logger.info("Model workers started listening to events?")
-            # for e in model_worker_started:
-            #     e.wait()
-            #     logger.info(f"{e} listening to events")
+            logger.info("Model workers started listening to events?")
+            for e in model_worker_started:
+                e.wait()
+                logger.info(f"{e} listening to events")
 
             if p:= processes.get("api"):
                 logger.info("Starting api process...")
