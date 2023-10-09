@@ -217,7 +217,7 @@ VLLM_MODEL_DICT = {
     # "bloomz-1b7":"bigscience/bloomz-1b7",
 
     # "internlm-7b":"internlm/internlm-7b",
-    # "internlm-chat-7b":"internlm/internlm-chat-7b",
+    "internlm-chat-7b":"internlm/internlm-chat-7b",
     # "falcon-7b":"tiiuae/falcon-7b",
     # "falcon-40b":"tiiuae/falcon-40b",
     # "falcon-rw-7b":"tiiuae/falcon-rw-7b",
