@@ -108,7 +108,8 @@ EMBEDDING_MODEL = "text2vec-base" # 可以尝试最新的嵌入式sota模型：p
 EMBEDDING_DEVICE = "auto"
 
 # LLM 名称
-LLM_MODEL = "internlm-chat-7b"
+LLM_MODEL = "baichuan2-13b"
+# LLM_MODEL = "internlm-chat-7b"
 # LLM_MODEL = "Qwen-14B-Chat"
 # LLM_MODEL = "chatglm2-6b"
 
