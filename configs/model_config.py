@@ -17,86 +17,86 @@ MODEL_ROOT_PATH = ""
 #       2.2 如果以上本地路径不存在，则使用huggingface模型
 MODEL_PATH = {
     "embed_model": {
-        "ernie-tiny": "nghuyong/ernie-3.0-nano-zh",
-        "ernie-base": "nghuyong/ernie-3.0-base-zh",
+        # "ernie-tiny": "nghuyong/ernie-3.0-nano-zh",
+        # "ernie-base": "nghuyong/ernie-3.0-base-zh",
         "text2vec-base": str(anylearn.get_model("yhuang/text2vec-base-chinese").download()),
         # "text2vec-base": "shibing624/text2vec-base-chinese",
-        "text2vec": "GanymedeNil/text2vec-large-chinese",
-        "text2vec-paraphrase": "shibing624/text2vec-base-chinese-paraphrase",
-        "text2vec-sentence": "shibing624/text2vec-base-chinese-sentence",
-        "text2vec-multilingual": "shibing624/text2vec-base-multilingual",
-        "text2vec-bge-large-chinese": "shibing624/text2vec-bge-large-chinese",
-        "m3e-small": "moka-ai/m3e-small",
-        "m3e-base": "moka-ai/m3e-base",
-        "m3e-large": "moka-ai/m3e-large",
-        "bge-small-zh": "BAAI/bge-small-zh",
-        "bge-base-zh": "BAAI/bge-base-zh",
-        "bge-large-zh": "BAAI/bge-large-zh",
-        "bge-large-zh-noinstruct": "BAAI/bge-large-zh-noinstruct",
-        "bge-base-zh-v1.5": "BAAI/bge-base-zh-v1.5",
-        "bge-large-zh-v1.5": "BAAI/bge-large-zh-v1.5",
-        "piccolo-base-zh": "sensenova/piccolo-base-zh",
-        "piccolo-large-zh": "sensenova/piccolo-large-zh",
-        "text-embedding-ada-002": "your OPENAI_API_KEY",
+        # "text2vec": "GanymedeNil/text2vec-large-chinese",
+        # "text2vec-paraphrase": "shibing624/text2vec-base-chinese-paraphrase",
+        # "text2vec-sentence": "shibing624/text2vec-base-chinese-sentence",
+        # "text2vec-multilingual": "shibing624/text2vec-base-multilingual",
+        # "text2vec-bge-large-chinese": "shibing624/text2vec-bge-large-chinese",
+        # "m3e-small": "moka-ai/m3e-small",
+        # "m3e-base": "moka-ai/m3e-base",
+        # "m3e-large": "moka-ai/m3e-large",
+        # "bge-small-zh": "BAAI/bge-small-zh",
+        # "bge-base-zh": "BAAI/bge-base-zh",
+        # "bge-large-zh": "BAAI/bge-large-zh",
+        # "bge-large-zh-noinstruct": "BAAI/bge-large-zh-noinstruct",
+        # "bge-base-zh-v1.5": "BAAI/bge-base-zh-v1.5",
+        # "bge-large-zh-v1.5": "BAAI/bge-large-zh-v1.5",
+        # "piccolo-base-zh": "sensenova/piccolo-base-zh",
+        # "piccolo-large-zh": "sensenova/piccolo-large-zh",
+        # "text-embedding-ada-002": "your OPENAI_API_KEY",
     },
     # TODO: add all supported llm models
     "llm_model": {
         # 以下部分模型并未完全测试，仅根据fastchat和vllm模型的模型列表推定支持
-        "chatglm-6b": "THUDM/chatglm-6b",
+        # "chatglm-6b": "THUDM/chatglm-6b",
         # "chatglm2-6b": str(anylearn.get_model("yhuang/ChatGLM2-6B-dirname").download() / "chatglm2-6b"),
-        "chatglm2-6b": "THUDM/chatglm2-6b",
-        "chatglm2-6b-int4": "THUDM/chatglm2-6b-int4",
-        "chatglm2-6b-32k": "THUDM/chatglm2-6b-32k",
+        # "chatglm2-6b": "THUDM/chatglm2-6b",
+        # "chatglm2-6b-int4": "THUDM/chatglm2-6b-int4",
+        # "chatglm2-6b-32k": "THUDM/chatglm2-6b-32k",
 
         "baichuan2-13b": str(anylearn.get_model("yhuang/Baichuan2-13B-Chat").download() / "Baichuan2-13B-Chat"),
         # "baichuan2-13b": "baichuan-inc/Baichuan-13B-Chat",
-        "baichuan2-7b":"baichuan-inc/Baichuan2-7B-Chat",
+        # "baichuan2-7b":"baichuan-inc/Baichuan2-7B-Chat",
 
-        "baichuan-7b": "baichuan-inc/Baichuan-7B",
-        "baichuan-13b": "baichuan-inc/Baichuan-13B",
-        'baichuan-13b-chat':'baichuan-inc/Baichuan-13B-Chat',
+        # "baichuan-7b": "baichuan-inc/Baichuan-7B",
+        # "baichuan-13b": "baichuan-inc/Baichuan-13B",
+        # 'baichuan-13b-chat':'baichuan-inc/Baichuan-13B-Chat',
 
-        "aquila-7b":"BAAI/Aquila-7B",
-        "aquilachat-7b":"BAAI/AquilaChat-7B",
+        # "aquila-7b":"BAAI/Aquila-7B",
+        # "aquilachat-7b":"BAAI/AquilaChat-7B",
 
-        "internlm-7b":"internlm/internlm-7b",
-        "internlm-chat-7b": str(anylearn.get_model("yhuang/InternLM-Chat-7B").download() / "internlm-chat-7b"),
+        # "internlm-7b":"internlm/internlm-7b",
+        # "internlm-chat-7b": str(anylearn.get_model("yhuang/InternLM-Chat-7B").download() / "internlm-chat-7b"),
         # "internlm-chat-7b":"internlm/internlm-chat-7b",
 
-        "falcon-7b":"tiiuae/falcon-7b",
-        "falcon-40b":"tiiuae/falcon-40b",
-        "falcon-rw-7b":"tiiuae/falcon-rw-7b",
+        # "falcon-7b":"tiiuae/falcon-7b",
+        # "falcon-40b":"tiiuae/falcon-40b",
+        # "falcon-rw-7b":"tiiuae/falcon-rw-7b",
 
-        "gpt2":"gpt2",
-        "gpt2-xl":"gpt2-xl",
+        # "gpt2":"gpt2",
+        # "gpt2-xl":"gpt2-xl",
         
-        "gpt-j-6b":"EleutherAI/gpt-j-6b",
-        "gpt4all-j":"nomic-ai/gpt4all-j",
-        "gpt-neox-20b":"EleutherAI/gpt-neox-20b",
-        "pythia-12b":"EleutherAI/pythia-12b",
-        "oasst-sft-4-pythia-12b-epoch-3.5":"OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5",
-        "dolly-v2-12b": str(anylearn.get_model("yhuang/dolly-v2-12b").download() / "dolly-v2-12b"),
+        # "gpt-j-6b":"EleutherAI/gpt-j-6b",
+        # "gpt4all-j":"nomic-ai/gpt4all-j",
+        # "gpt-neox-20b":"EleutherAI/gpt-neox-20b",
+        # "pythia-12b":"EleutherAI/pythia-12b",
+        # "oasst-sft-4-pythia-12b-epoch-3.5":"OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5",
+        # "dolly-v2-12b": str(anylearn.get_model("yhuang/dolly-v2-12b").download() / "dolly-v2-12b"),
         # "dolly-v2-12b":"databricks/dolly-v2-12b",    
-        "stablelm-tuned-alpha-7b":"stabilityai/stablelm-tuned-alpha-7b",
+        # "stablelm-tuned-alpha-7b":"stabilityai/stablelm-tuned-alpha-7b",
 
-        "Llama-2-13b-hf":"meta-llama/Llama-2-13b-hf",    
-        "Llama-2-70b-hf":"meta-llama/Llama-2-70b-hf",
-        "open_llama_13b":"openlm-research/open_llama_13b",    
-        "vicuna-13b-v1.3": str(anylearn.get_model("yhuang/Vicuna-13B").download() / "vicuna-13b-v1.3"),
+        # "Llama-2-13b-hf":"meta-llama/Llama-2-13b-hf",    
+        # "Llama-2-70b-hf":"meta-llama/Llama-2-70b-hf",
+        # "open_llama_13b":"openlm-research/open_llama_13b",    
+        # "vicuna-13b-v1.3": str(anylearn.get_model("yhuang/Vicuna-13B").download() / "vicuna-13b-v1.3"),
         # "vicuna-13b-v1.3":"lmsys/vicuna-13b-v1.3",
-        "koala":"young-geng/koala",  
+        # "koala":"young-geng/koala",  
           
-        "mpt-7b":"mosaicml/mpt-7b",
-        "mpt-7b-storywriter":"mosaicml/mpt-7b-storywriter",    
-        "mpt-30b":"mosaicml/mpt-30b",
-        "opt-66b":"facebook/opt-66b",    
-        "opt-iml-max-30b":"facebook/opt-iml-max-30b",
+        # "mpt-7b":"mosaicml/mpt-7b",
+        # "mpt-7b-storywriter":"mosaicml/mpt-7b-storywriter",    
+        # "mpt-30b":"mosaicml/mpt-30b",
+        # "opt-66b":"facebook/opt-66b",    
+        # "opt-iml-max-30b":"facebook/opt-iml-max-30b",
 
-        "Qwen-7B":"Qwen/Qwen-7B",
-        "Qwen-14B":"Qwen/Qwen-14B",
-        "Qwen-7B-Chat":"Qwen/Qwen-7B-Chat",
+        # "Qwen-7B":"Qwen/Qwen-7B",
+        # "Qwen-14B":"Qwen/Qwen-14B",
+        # "Qwen-7B-Chat":"Qwen/Qwen-7B-Chat",
         # "Qwen-14B-Chat": str(anylearn.get_model("yhuang/Qwen-14B-Chat").download() / "Qwen-14B-Chat"),
-        "Qwen-14B-Chat":"Qwen/Qwen-14B-Chat",
+        # "Qwen-14B-Chat":"Qwen/Qwen-14B-Chat",
     },
 }
 
@@ -141,63 +141,69 @@ ONLINE_LLM_MODEL = {
     # 4.0 seconds as it raised APIConnectionError: Error communicating with OpenAI.
     # 需要添加代理访问(正常开的代理软件可能会拦截不上)需要设置配置openai_proxy 或者 使用环境遍历OPENAI_PROXY 进行设置
     # 比如: "openai_proxy": 'http://127.0.0.1:4780'
-    "gpt-3.5-turbo": {
-        "api_base_url": "https://api.openai.com/v1",
-        "api_key": "your OPENAI_API_KEY",
-        "openai_proxy": "your OPENAI_PROXY",
-    },
+    # "gpt-3.5-turbo": {
+    #     "api_base_url": "https://api.openai.com/v1",
+    #     "api_key": "your OPENAI_API_KEY",
+    #     "openai_proxy": "your OPENAI_PROXY",
+    # },
+
     # 线上模型。请在server_config中为每个在线API设置不同的端口
     # 具体注册及api key获取请前往 http://open.bigmodel.cn
-    "zhipu-api": {
-        "api_key": "",
-        "version": "chatglm_pro",  # 可选包括 "chatglm_lite", "chatglm_std", "chatglm_pro"
-        "provider": "ChatGLMWorker",
-    },
+    # "zhipu-api": {
+    #     "api_key": "",
+    #     "version": "chatglm_pro",  # 可选包括 "chatglm_lite", "chatglm_std", "chatglm_pro"
+    #     "provider": "ChatGLMWorker",
+    # },
+
     # 具体注册及api key获取请前往 https://api.minimax.chat/
-    "minimax-api": {
-        "group_id": "",
-        "api_key": "",
-        "is_pro": False,
-        "provider": "MiniMaxWorker",
-    },
+    # "minimax-api": {
+    #     "group_id": "",
+    #     "api_key": "",
+    #     "is_pro": False,
+    #     "provider": "MiniMaxWorker",
+    # },
+
     # 具体注册及api key获取请前往 https://xinghuo.xfyun.cn/
-    "xinghuo-api": {
-        "APPID": "",
-        "APISecret": "",
-        "api_key": "",
-        "is_v2": False,
-        "provider": "XingHuoWorker",
-    },
+    # "xinghuo-api": {
+    #     "APPID": "",
+    #     "APISecret": "",
+    #     "api_key": "",
+    #     "is_v2": False,
+    #     "provider": "XingHuoWorker",
+    # },
+
     # 百度千帆 API，申请方式请参考 https://cloud.baidu.com/doc/WENXINWORKSHOP/s/4lilb2lpf
-    "qianfan-api": {
-        "version": "ernie-bot-turbo",  # 当前支持 "ernie-bot" 或 "ernie-bot-turbo"， 更多的见官方文档。
-        "version_url": "", # 也可以不填写version，直接填写在千帆申请模型发布的API地址
-        "api_key": "",
-        "secret_key": "",
-        "provider": "QianFanWorker",
-    },
+    # "qianfan-api": {
+    #     "version": "ernie-bot-turbo",  # 当前支持 "ernie-bot" 或 "ernie-bot-turbo"， 更多的见官方文档。
+    #     "version_url": "", # 也可以不填写version，直接填写在千帆申请模型发布的API地址
+    #     "api_key": "",
+    #     "secret_key": "",
+    #     "provider": "QianFanWorker",
+    # },
+
     # 火山方舟 API，文档参考 https://www.volcengine.com/docs/82379
-    "fangzhou-api": {
-        "version": "chatglm-6b-model",  # 当前支持 "chatglm-6b-model"， 更多的见文档模型支持列表中方舟部分。
-        "version_url": "",  # 可以不填写version，直接填写在方舟申请模型发布的API地址
-        "api_key": "",
-        "secret_key": "",
-        "provider": "FangZhouWorker",
-    },
+    # "fangzhou-api": {
+    #     "version": "chatglm-6b-model",  # 当前支持 "chatglm-6b-model"， 更多的见文档模型支持列表中方舟部分。
+    #     "version_url": "",  # 可以不填写version，直接填写在方舟申请模型发布的API地址
+    #     "api_key": "",
+    #     "secret_key": "",
+    #     "provider": "FangZhouWorker",
+    # },
+
     # 阿里云通义千问 API，文档参考 https://help.aliyun.com/zh/dashscope/developer-reference/api-details
-    "qwen-api": {
-        "version": "qwen-turbo",  # 可选包括 "qwen-turbo", "qwen-plus"
-        "api_key": "",  # 请在阿里云控制台模型服务灵积API-KEY管理页面创建
-        "provider": "QwenWorker",
-    },
+    # "qwen-api": {
+    #     "version": "qwen-turbo",  # 可选包括 "qwen-turbo", "qwen-plus"
+    #     "api_key": "",  # 请在阿里云控制台模型服务灵积API-KEY管理页面创建
+    #     "provider": "QwenWorker",
+    # },
 
     # 百川 API，申请方式请参考 https://www.baichuan-ai.com/home#api-enter
-    "baichuan-api": {
-        "version": "Baichuan2-53B",  # 当前支持 "Baichuan2-53B"， 见官方文档。
-        "api_key": "",
-        "secret_key": "",
-        "provider": "BaiChuanWorker",
-    },
+    # "baichuan-api": {
+    #     "version": "Baichuan2-53B",  # 当前支持 "Baichuan2-53B"， 见官方文档。
+    #     "api_key": "",
+    #     "secret_key": "",
+    #     "provider": "BaiChuanWorker",
+    # },
 }
 
 
@@ -223,7 +229,7 @@ VLLM_MODEL_DICT = {
     # "bloomz-1b7":"bigscience/bloomz-1b7",
 
     # "internlm-7b":"internlm/internlm-7b",
-    "internlm-chat-7b":"internlm/internlm-chat-7b",
+    # "internlm-chat-7b":"internlm/internlm-chat-7b",
     # "falcon-7b":"tiiuae/falcon-7b",
     # "falcon-40b":"tiiuae/falcon-40b",
     # "falcon-rw-7b":"tiiuae/falcon-rw-7b",
@@ -234,12 +240,12 @@ VLLM_MODEL_DICT = {
     # "gpt-neox-20b":"EleutherAI/gpt-neox-20b",
     # "pythia-12b":"EleutherAI/pythia-12b",
     # "oasst-sft-4-pythia-12b-epoch-3.5":"OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5",
-    "dolly-v2-12b":"databricks/dolly-v2-12b",    
+    # "dolly-v2-12b":"databricks/dolly-v2-12b",    
     # "stablelm-tuned-alpha-7b":"stabilityai/stablelm-tuned-alpha-7b",
     # "Llama-2-13b-hf":"meta-llama/Llama-2-13b-hf",    
     # "Llama-2-70b-hf":"meta-llama/Llama-2-70b-hf",
     # "open_llama_13b":"openlm-research/open_llama_13b",    
-    "vicuna-13b-v1.3":"lmsys/vicuna-13b-v1.3",
+    # "vicuna-13b-v1.3":"lmsys/vicuna-13b-v1.3",
     # "koala":"young-geng/koala",    
     # "mpt-7b":"mosaicml/mpt-7b",
     # "mpt-7b-storywriter":"mosaicml/mpt-7b-storywriter",    
