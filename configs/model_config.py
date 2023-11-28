@@ -110,7 +110,8 @@ EMBEDDING_DEVICE = "auto"
 
 # LLM 名称
 # LLM_MODEL = "vicuna-13b-v1.3"
-LLM_MODEL = "baichuan2-13b"
+LLM_MODELS = ["chatglm3-6b"]
+# LLM_MODEL = "baichuan2-13b"
 # LLM_MODEL = "internlm-chat-7b"
 # LLM_MODEL = "Qwen-14B-Chat"
 # LLM_MODEL = "chatglm2-6b"
