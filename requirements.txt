@@ -7,9 +7,6 @@ xformers>=0.0.22.post4
 openai>=0.28.1
 sentence_transformers
 transformers>=4.34
-torch>=2.0.1 # suggest version 2.1,#on win,  install the cuda version manually if you want use gpu
-torchvision #on win,  install the cuda version manually if you want use gpu
-torchaudio #on win,  install the cuda version manually if you want use gpu
 fastapi>=0.104
 nltk>=3.8.1
 uvicorn~=0.23.1
