@@ -661,6 +661,7 @@ async def start_main_server():
 
     controller_started = manager.Event()
     if args.openai_api:
+        logger.info("Preparing OpenAI API server...")
         process = Process(
             target=run_controller,
             name=f"controller",
@@ -678,6 +679,7 @@ async def start_main_server():
 
     model_worker_started = []
     if args.model_worker:
+        logger.info("Preparing model worker...")
         for model_name in args.model_name:
             config = get_model_worker_config(model_name)
             if not config.get("online_api"):
@@ -696,6 +698,7 @@ async def start_main_server():
                 processes["model_worker"][model_name] = process
 
     if args.api_worker:
+        logger.info("Preparing online API worker...")
         for model_name in args.model_name:
             config = get_model_worker_config(model_name)
             if (config.get("online_api")
@@ -717,6 +720,7 @@ async def start_main_server():
 
     api_started = manager.Event()
     if args.api:
+        logger.info("Preparing API server...")
         process = Process(
             target=run_api_server,
             name=f"API Server",
@@ -727,6 +731,7 @@ async def start_main_server():
 
     webui_started = manager.Event()
     if args.webui:
+        logger.info("Preparing WEBUI server...")
         process = Process(
             target=run_webui,
             name=f"WEBUI Server",
@@ -735,40 +740,53 @@ async def start_main_server():
         )
         processes["webui"] = process
 
+    logger.info(f"Processes: {processes}")
+
     if process_count() == 0:
         parser.print_help()
     else:
         try:
             # 保证任务收到SIGINT后，能够正常退出
             if p:= processes.get("controller"):
+                logger.info("Starting controller process...")
                 p.start()
                 p.name = f"{p.name} ({p.pid})"
                 controller_started.wait() # 等待controller启动完成
+                logger.info("Controller started listening to events")
 
             if p:= processes.get("openai_api"):
+                logger.info("Starting openai_api process...")
                 p.start()
                 p.name = f"{p.name} ({p.pid})"
 
             for n, p in processes.get("model_worker", {}).items():
+                logger.info("Starting model worker process...")
                 p.start()
                 p.name = f"{p.name} ({p.pid})"
 
             for n, p in processes.get("online_api", []).items():
+                logger.info("Starting online api worker process...")
                 p.start()
                 p.name = f"{p.name} ({p.pid})"
 
             # 等待所有model_worker启动完成
+            logger.info("Model workers started listening to events?")
             for e in model_worker_started:
                 e.wait()
+                logger.info(f"{e} listening to events")
 
             if p:= processes.get("api"):
+                logger.info("Starting api process...")
                 p.start()
                 p.name = f"{p.name} ({p.pid})"
+                logger.info("Waiting for api to start...")
                 api_started.wait() # 等待api.py启动完成
 
             if p:= processes.get("webui"):
+                logger.info("Starting webui process...")
                 p.start()
                 p.name = f"{p.name} ({p.pid})"
+                logger.info("Waiting for webui to start...")
                 webui_started.wait() # 等待webui.py启动完成
 
             dump_server_info(after_start=True, args=args)
