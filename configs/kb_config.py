@@ -41,6 +41,7 @@ BING_SUBSCRIPTION_KEY = ""
 # 然后将文本与往上一级的标题进行拼合，实现文本信息的增强。
 ZH_TITLE_ENHANCE = False
 
+KB_INFO = {}
 
 # 通常情况下不需要更改以下内容
 
