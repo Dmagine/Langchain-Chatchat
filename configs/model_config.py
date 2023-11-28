@@ -47,8 +47,10 @@ MODEL_PATH = {
         # "chatglm2-6b": "THUDM/chatglm2-6b",
         # "chatglm2-6b-int4": "THUDM/chatglm2-6b-int4",
         # "chatglm2-6b-32k": "THUDM/chatglm2-6b-32k",
+        "chatglm3-6b": str(anylearn.get_model("yhuang/ChatGLM3-6B").download() / "chatglm3-6b"),
 
-        "baichuan2-13b": str(anylearn.get_model("yhuang/Baichuan2-13B-Chat").download() / "Baichuan2-13B-Chat"),
+
+        # "baichuan2-13b": str(anylearn.get_model("yhuang/Baichuan2-13B-Chat").download() / "Baichuan2-13B-Chat"),
         # "baichuan2-13b": "baichuan-inc/Baichuan-13B-Chat",
         # "baichuan2-7b":"baichuan-inc/Baichuan2-7B-Chat",
 
@@ -109,7 +111,8 @@ EMBEDDING_DEVICE = "auto"
 
 # LLM 名称
 # LLM_MODEL = "vicuna-13b-v1.3"
-LLM_MODEL = "baichuan2-13b"
+LLM_MODEL = "chatglm3-6b"
+# LLM_MODEL = "baichuan2-13b"
 # LLM_MODEL = "internlm-chat-7b"
 # LLM_MODEL = "Qwen-14B-Chat"
 # LLM_MODEL = "chatglm2-6b"
