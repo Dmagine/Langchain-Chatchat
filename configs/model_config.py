@@ -217,6 +217,8 @@ NLTK_DATA_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "nltk_
 
 
 VLLM_MODEL_DICT = {
+    "chatglm3-6b": "THUDM/chatglm3-6b",
+
     # "aquila-7b":"BAAI/Aquila-7B",
     # "aquilachat-7b":"BAAI/AquilaChat-7B",
 
