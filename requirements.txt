@@ -4,7 +4,7 @@ langchain>=0.0.302
 fschat[model_worker]==0.2.29
 openai
 sentence_transformers
-transformers==4.33.3
+transformers
 torch>=2.0.1
 torchvision
 torchaudio
@@ -27,7 +27,7 @@ pathlib
 pytest
 scikit-learn
 numexpr
-vllm==0.1.7; sys_platform == "linux"
+vllm
 # online api libs
 # zhipuai
 # dashscope>=1.10.0 # qwen
